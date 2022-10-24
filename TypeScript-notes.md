@@ -34,7 +34,6 @@ let peerson1: Person = {
 let lotsOfPeople: Person[];
 
 
-
 interface Person {
     name: string;
     age?: number;
@@ -43,9 +42,7 @@ interface Person {
 // extending classes -type and interface ...
 interface Guy extends Person {
     profession: string;
-
 }
-
 ```
 
 Defining Functions
@@ -58,5 +55,4 @@ console.log(name)
 let printNamee: (name: string) => never;
 // => never  doesnt return anything
 // => void  returns undefined
-
 ```
