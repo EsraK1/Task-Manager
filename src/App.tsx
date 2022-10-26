@@ -35,7 +35,6 @@ const App: React.FC = ()=> {
     <span className='heading'>Task Manager</span>
     <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
     <TodoList todos={todos} setTodos={setTodos}/>
-    {/* {todos.map((t) => (<li>{t.todo}</li>))} */}
     </div>
   );
 }
