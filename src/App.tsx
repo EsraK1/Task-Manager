@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import InputField from './components/InputField';
 import { Todo } from './components/model';
+import TodoList from './components/TodoList';
 
 
 const App: React.FC = ()=> {
@@ -10,7 +11,7 @@ const App: React.FC = ()=> {
 
   // array of a type/interface
     // Todo can be found in model.ts | ⬇ type is array 
-  const [todos, setTodos] = useState<Todo[]>([])
+  const [todos, setTodos] = useState<Todo[]>([]);
 
   // whereever we send a variable we have to define its type 
   // for example the type of handleAdd is also defined in inputField.tsx file
@@ -33,7 +34,8 @@ const App: React.FC = ()=> {
     <div className="App">
     <span className='heading'>Task Manager</span>
     <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
-    {todos.map((t) => (<li>{t.todo}</li>))}
+    <TodoList todos={todos} setTodos={setTodos}/>
+    {/* {todos.map((t) => (<li>{t.todo}</li>))} */}
     </div>
   );
 }
