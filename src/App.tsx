@@ -12,12 +12,14 @@ const App: React.FC = ()=> {
     // Todo can be found in model.ts | ⬇ type is array 
   const [todos, setTodos] = useState<Todo[]>([])
 
-  
+  const handleAdd = () => {}
+
+
   console.log(todo)
   return (
     <div className="App">
     <span className='heading'>Task Manager</span>
-    <InputField todo={todo} setTodo={setTodo}/>
+    <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
     </div>
   );
 }
